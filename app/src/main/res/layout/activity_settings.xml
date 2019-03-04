@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SettingsActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/app_bar_settings"
+        android:background="@color/colorPrimary">
+
+        <android.support.v7.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/toolbar_settings">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/close_settings"
+                    android:text="Close"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/white"
+                    android:textSize="17sp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true" />
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:id="@+id/image_settings"
+        android:layout_below="@+id/app_bar_settings"
+        android:src="@drawable/profile"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/update_image_settings"
+        android:text="Update Image"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:textSize="17sp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/image_settings"
+        android:layout_marginTop="15dp"
+        />
+    <EditText
+        android:id="@+id/update_phone_settings"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_margin="15dp"
+        android:hint="Enter Phone"
+        android:layout_below="@+id/update_image_settings"/>
+
+
+    <EditText
+        android:id="@+id/update_name_settings"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_margin="15dp"
+        android:hint="Enter Full Name"
+        android:layout_below="@+id/update_phone_settings"/>
+    <EditText
+        android:id="@+id/update_adress_settings"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_margin="15dp"
+        android:hint="Enter Address"
+        android:layout_below="@+id/update_name_settings"/>
+    <EditText
+        android:id="@+id/update_password_settings"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_margin="15dp"
+        android:hint="Enter Password"
+        android:layout_below="@+id/update_adress_settings"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/submit_settings"
+        android:layout_below="@+id/update_password_settings"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/buttons"
+        android:padding="27dp"
+        android:text="Update"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        />
+
+</RelativeLayout>

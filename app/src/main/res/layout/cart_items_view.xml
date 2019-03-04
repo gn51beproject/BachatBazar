@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    android:id="@+id/cart_items_lay"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="10dp"
+    app:cardElevation="15dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/cart_items_name"
+            android:text="name"
+            android:textSize="16sp"
+            android:layout_margin="10dp"/>
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/cart_items_img"
+            android:layout_toRightOf="@id/cart_items_name"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/cart_items_seller"
+            android:layout_below="@+id/cart_items_name"
+            android:text="seller"
+            android:textSize="12sp"
+            android:layout_margin="10dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/cart_items_quantity"
+            android:text="Qty:"
+            android:textSize="16sp"
+            android:layout_below="@+id/cart_items_img"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:textStyle="bold"
+            android:layout_margin="12dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/cart_items_price"
+            android:layout_below="@+id/cart_items_seller"
+            android:text="price"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_margin="10dp"/>
+
+    </RelativeLayout>
+
+
+
+</android.support.v7.widget.CardView>
