@@ -6,6 +6,14 @@
     android:layout_height="match_parent"
     tools:context=".AdminActivity">
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
     <ImageView
         android:layout_width="350dp"
         android:layout_height="200dp"
@@ -42,11 +50,25 @@
         android:layout_marginLeft="45dp"
         android:layout_marginRight="45dp"
         android:layout_marginTop="20dp"
-        android:hint="      Enter Product Price in Rs..."
+        android:hint="      Enter Product MAX Price in Rs..."
         android:id="@+id/select_product_price"
         android:inputType="number"
         android:background="@drawable/input_design"
         android:layout_below="@+id/select_product_description"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginLeft="45dp"
+        android:layout_marginRight="45dp"
+        android:layout_marginTop="20dp"
+        android:hint="      Enter Product min Price"
+        android:id="@+id/select_product_min_price"
+        android:inputType="number"
+        android:background="@drawable/input_design"
+        android:layout_below="@+id/select_product_price"/>
+
+
+
 
     <EditText
         android:layout_width="match_parent"
@@ -58,13 +80,13 @@
         android:id="@+id/select_product_quantity"
         android:inputType="number"
         android:background="@drawable/input_design"
-        android:layout_below="@+id/select_product_price"/>
+        android:layout_below="@+id/select_product_min_price"/>
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/add"
-        android:layout_below="@+id/select_product_price"
+        android:layout_below="@+id/select_product_min_price"
         android:layout_marginLeft="15dp"
         android:layout_marginTop="20dp"
         android:layout_marginRight="15dp"
@@ -80,4 +102,6 @@
 
 
 
+        </LinearLayout>
+    </ScrollView>
 </RelativeLayout>

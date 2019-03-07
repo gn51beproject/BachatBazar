@@ -4,11 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ProductDetails">
+    tools:context=".ProductDetails"
+    android:orientation="vertical">
+
 
     <ImageView
         android:layout_width="match_parent"
-        android:layout_height="300dp"
+        android:layout_height="250dp"
         android:id="@+id/product_details_img"
         android:layout_marginTop="5dp"/>
     <TextView
@@ -17,7 +19,7 @@
         android:id="@+id/product_details_name"
         android:layout_below="@+id/product_details_img"
         android:padding="10dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="7dp"
         android:textSize="18sp"
         android:textColor="@android:color/black"
         android:layout_centerHorizontal="true"
@@ -31,7 +33,7 @@
         android:id="@+id/product_details_description"
         android:layout_below="@+id/product_details_name"
         android:padding="10dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="7dp"
         android:textSize="18sp"
         android:textStyle="bold"
         android:textColor="@android:color/black"
@@ -44,7 +46,7 @@
         android:id="@+id/product_details_price"
         android:layout_below="@+id/product_details_description"
         android:padding="10dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="7dp"
         android:textSize="18sp"
         android:textStyle="bold"
         android:textColor="@android:color/black"
@@ -57,10 +59,29 @@
         app:initialNumber="1"
         app:finalNumber="10"
         app:textSize="16sp"
+        android:layout_marginTop="7dp"
+        app:backGroundColor="@color/colorPrimaryDark"
         android:layout_centerHorizontal="true"
         android:gravity="center"
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"/>
+    <Button
+        android:id="@+id/product_details_negotiation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/product_details_button"
+        android:layout_marginBottom="7dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="15dp"
+        android:background="@color/colorPrimaryDark"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:padding="20dp"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        android:text="Negotiate"
+        android:textColor="@android:color/white"/>
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/product_details_cart"
@@ -71,8 +92,10 @@
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="5dp"
         android:layout_marginRight="5dp"
+        android:layout_marginTop="7dp"
         android:background="@android:color/white"
         android:src="@drawable/cart"
         app:backgroundTint="@color/cardview_light_background" />
+
 
 </RelativeLayout>

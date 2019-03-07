@@ -33,9 +33,9 @@ import java.util.HashMap;
 
 public class AdminActivity extends AppCompatActivity {
 
-    private String category,description,price,name,saveCurrentDate,saveCurrentTime,productRandomKey,downloadImageUrl;
+    private String category,description,price,name,minPrice,saveCurrentDate,saveCurrentTime,productRandomKey,downloadImageUrl;
     private ImageView img;
-    private EditText inputName,inputDescription,inputPrice,inputQuantity;
+    private EditText inputName,inputDescription,inputPrice,inputMinPrice,inputQuantity;
     private Button add;
     private static final int GalleryPick=1;
     private Uri uriImage;
@@ -50,6 +50,7 @@ public class AdminActivity extends AppCompatActivity {
         inputName=(EditText)findViewById(R.id.select_product_name);
         inputDescription=(EditText)findViewById(R.id.select_product_description);
         inputPrice=(EditText)findViewById(R.id.select_product_price);
+        inputMinPrice=(EditText)findViewById(R.id.select_product_min_price);
         inputQuantity=(EditText)findViewById(R.id.select_product_quantity);
         img=(ImageView)findViewById(R.id.select_product_image);
         add=(Button)findViewById(R.id.add);
@@ -88,6 +89,7 @@ public class AdminActivity extends AppCompatActivity {
         name=inputName.getText().toString();
         description=inputDescription.getText().toString();
         price=inputPrice.getText().toString();
+        minPrice=inputMinPrice.getText().toString();
         if(uriImage==null){
             Toast.makeText(getBaseContext(),"Image is Compulsary...",Toast.LENGTH_SHORT).show();
         }
@@ -101,11 +103,11 @@ public class AdminActivity extends AppCompatActivity {
             Toast.makeText(getBaseContext(),"Price is Compulsary...",Toast.LENGTH_SHORT).show();
         }
         else {
-            insertData(name,description,price);
+            insertData(name,description,price,minPrice);
         }
     }
 
-    private void insertData(String name, String description, String price) {
+    private void insertData(String name, String description, String price,String minPrice) {
         Calendar calendar=Calendar.getInstance();
 
         SimpleDateFormat currentDate=new SimpleDateFormat("MMM dd,yyyy");
@@ -170,6 +172,7 @@ public class AdminActivity extends AppCompatActivity {
         productMap.put("description",description);
         productMap.put("name",name);
         productMap.put("price",price);
+        productMap.put("minprice",minPrice);
         productMap.put("quantity",inputQuantity.getText().toString());
         productMap.put("category",category);
         productMap.put("image",downloadImageUrl);
