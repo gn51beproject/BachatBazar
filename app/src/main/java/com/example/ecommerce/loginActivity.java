@@ -26,7 +26,7 @@ import com.rey.material.widget.CheckBox;
 import io.paperdb.Paper;
 
 public class loginActivity extends AppCompatActivity {
-
+//test
     private EditText phn,pw;
     private Button login;
     private CheckBox check;
