@@ -7,4 +7,7 @@
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
+    <string name="bachat_bazaar">Bachat Bazaar</string>
+    <string name="already_have_an_account_login">Already Have An Account? Login</string>
+    <string name="join_now">Join Now</string>
 </resources>
