@@ -4,108 +4,181 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/login"
+    android:background="@color/colorPrimary"
 
     tools:context=".loginActivity">
 
     <ImageView
-        android:layout_width="300dp"
+        android:id="@+id/img1"
+        android:layout_width="100dp"
         android:layout_height="100dp"
-        android:id="@+id/login_logo"
-        android:src="@drawable/applogo1"
+
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="150dp"/>
-    <EditText
-        android:layout_width="match_parent"
+        android:layout_marginTop="60dp"
+        android:src="@drawable/playstoreicon" />
+
+    <TextView
+        android:id="@+id/app_slogan"
+        android:layout_width="220dp"
         android:layout_height="wrap_content"
-        android:id="@+id/phone"
-        android:hint="Enter Phone"
-        android:layout_below="@+id/login_logo"
-        android:background="@drawable/input_design"
-        android:padding="20dp"
-        android:layout_marginLeft="15dp"
-        android:layout_marginRight="15dp"
-        android:inputType="number"
-        android:textColor="@android:color/white"
-        android:textColorHint="@android:color/white"
-        android:textSize="15sp"
-        android:textStyle="bold"/>
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/password"
-        android:hint="Enter Password"
-        android:layout_below="@+id/phone"
-        android:background="@drawable/input_design"
-        android:padding="20dp"
-        android:layout_marginLeft="15dp"
-        android:layout_marginRight="15dp"
-        android:layout_marginTop="6dp"
-        android:textColor="@android:color/white"
-        android:textColorHint="@android:color/white"
-        android:textSize="15sp"
-        android:textStyle="bold"/>
+        android:layout_below="@id/img1"
+        android:layout_centerHorizontal="true"
+        android:padding="10dp"
+        android:text="@string/log_in"
+        android:textAlignment="center"
+        android:textColor="@color/colorAccent"
+        android:textSize="22sp"
+        android:textStyle="bold|italic" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/linear_lay"
-        android:orientation="horizontal"
-        android:layout_below="@+id/password"
-        android:layout_marginTop="5dp">
-    <com.rey.material.widget.CheckBox
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/check"
-        style="@style/Material.Drawable.CheckBox"
-        android:text="Remember Me"
-        android:textColor="@android:color/white"
-        app:cbd_strokeColor="@color/colorPrimaryDark"
-        android:gravity="center_vertical"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        android:layout_marginLeft="17dp" />
-        <TextView
-            android:layout_width="wrap_content"
+        android:layout_below="@+id/app_slogan"
+        android:layout_marginTop="15dp"
+        android:orientation="vertical">
+
+
+        <com.github.florent37.materialtextfield.MaterialTextField
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/forget_pass"
-            android:text="Forget Password"
+            android:padding="10dp"
+            app:mtf_image="@drawable/ic_phone_receiver"
+
+            app:mtf_labelColor="@color/colorAccent">
+
+            <EditText
+                android:id="@+id/phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/enter_phone_number"
+                android:importantForAutofill="no"
+                android:inputType="phone"
+                android:textColor="#333"
+                android:textColorHint="@color/colorAccent"
+                android:textSize="18sp"
+                tools:targetApi="o" />
+        </com.github.florent37.materialtextfield.MaterialTextField>
+
+        <com.github.florent37.materialtextfield.MaterialTextField
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            app:mtf_image="@drawable/ic_key_silhouette_security_tool_interface_symbol_of_password"
+
+            app:mtf_labelColor="@color/colorAccent">
+
+            <EditText
+                android:id="@+id/password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/enter_password"
+                android:importantForAutofill="no"
+                android:inputType="textPassword"
+                android:textColor="#333"
+                android:textColorHint="@color/colorAccent"
+                android:textSize="18sp"
+                tools:targetApi="o" />
+
+        </com.github.florent37.materialtextfield.MaterialTextField>
+
+
+        <!-- <ImageView
+              android:layout_width="300dp"
+              android:layout_height="100dp"
+              android:id="@+id/login_logo"
+              android:src="@drawable/applogo1"
+              android:layout_centerHorizontal="true"
+              android:layout_marginTop="150dp"/>
+          <EditText
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:id="@+id/phone"
+              android:hint="Enter Phone"
+              android:layout_below="@+id/login_logo"
+              android:background="@drawable/input_design"
+              android:padding="20dp"
+              android:layout_marginLeft="15dp"
+              android:layout_marginRight="15dp"
+              android:inputType="number"
+              android:textColor="@android:color/white"
+              android:textColorHint="@android:color/white"
+              android:textSize="15sp"
+              android:textStyle="bold"/>
+          <EditText
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:id="@+id/password"
+              android:hint="Enter Password"
+              android:layout_below="@+id/phone"
+              android:background="@drawable/input_design"
+              android:padding="20dp"
+              android:layout_marginLeft="15dp"
+              android:layout_marginRight="15dp"
+              android:layout_marginTop="6dp"
+              android:textColor="@android:color/white"
+              android:textColorHint="@android:color/white"
+              android:textSize="15sp"
+              android:textStyle="bold"/>
+
+              -->
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.rey.material.widget.CheckBox
+                android:id="@+id/check"
+                style="@style/Material.Drawable.CheckBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="17dp"
+                android:gravity="start"
+                android:text="@string/remember_me"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:cbd_strokeColor="@color/colorPrimaryDark" />
+
+            <TextView
+                android:id="@+id/forget_pass"
+                android:gravity="end"
+                android:layout_marginEnd="23dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/forget_password"
+                android:textColor="@android:color/white"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+
+        <Button
+            android:id="@+id/login1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/buttons"
+            android:padding="27dp"
+            android:text="@string/login"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/admin_panel_link"
+            android:layout_width="match_parent"
+            android:gravity="end"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:text="@string/i_am_a_seller"
             android:textColor="@android:color/white"
             android:textSize="17sp"
-            android:textStyle="bold"
-            android:layout_marginLeft="80dp"/>
+            android:textStyle="bold" />
     </LinearLayout>
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/login1"
-        android:layout_below="@+id/linear_lay"
-        android:layout_marginLeft="15dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginRight="15dp"
-        android:layout_marginBottom="20dp"
-        android:background="@drawable/buttons"
-        android:padding="27dp"
-        android:text="Login"
-        android:textAllCaps="false"
-        android:textStyle="bold"
-        android:textColor="@android:color/white"
-        android:textSize="18sp"
-        />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/admin_panel_link"
-        android:text="I am a Seller?"
-        android:layout_alignParentEnd="true"
-        android:layout_below="@+id/login1"
-        android:textColor="@android:color/white"
-        android:textSize="17sp"
-        android:textStyle="bold"
-        android:layout_marginLeft="80dp"
-        android:layout_marginEnd="23dp"
-        android:layout_alignParentRight="true"
-        android:layout_marginRight="23dp" />
 
 </RelativeLayout>
