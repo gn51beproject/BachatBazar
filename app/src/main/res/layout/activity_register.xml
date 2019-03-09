@@ -4,6 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:focusableInTouchMode="true"
+    android:focusable="true"
     android:background="@color/colorPrimary"
     tools:context=".RegisterActivity">
 
@@ -38,28 +40,32 @@
 
 
         <com.github.florent37.materialtextfield.MaterialTextField
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="10dp"
-        app:mtf_labelColor="@color/colorAccent">
-
-        <EditText
-            android:id="@+id/reg_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/enter_name"
-            android:textColor="#333"
-            android:textSize="15sp"
-            android:textColorHint="@color/colorAccent"
-            android:importantForAutofill="no"
-            tools:targetApi="o"
-            android:inputType="textPersonName" />
+            android:padding="10dp"
+            app:mtf_image="@drawable/ic_man_user"
+
+            app:mtf_labelColor="@color/colorAccent">
+
+            <EditText
+                android:id="@+id/reg_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/enter_name"
+                android:importantForAutofill="no"
+                android:inputType="textPersonName"
+                android:textColor="#333"
+                android:textColorHint="@color/colorAccent"
+                android:textSize="18sp"
+                tools:targetApi="o" />
         </com.github.florent37.materialtextfield.MaterialTextField>
 
         <com.github.florent37.materialtextfield.MaterialTextField
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="10dp"
+            app:mtf_image="@drawable/ic_phone_receiver"
+
             app:mtf_labelColor="@color/colorAccent">
 
             <EditText
@@ -67,18 +73,20 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/enter_phone_number"
-                android:textColor="#333"
-                android:textSize="15sp"
-                android:textColorHint="@color/colorAccent"
                 android:importantForAutofill="no"
-                tools:targetApi="o"
-                android:inputType="phone" />
+                android:inputType="phone"
+                android:textColor="#333"
+                android:textColorHint="@color/colorAccent"
+                android:textSize="18sp"
+                tools:targetApi="o" />
         </com.github.florent37.materialtextfield.MaterialTextField>
 
         <com.github.florent37.materialtextfield.MaterialTextField
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="10dp"
+            app:mtf_image="@drawable/ic_key_silhouette_security_tool_interface_symbol_of_password"
+
             app:mtf_labelColor="@color/colorAccent">
 
             <EditText
@@ -86,62 +94,62 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/enter_password"
-                android:textColor="#333"
-                android:textSize="15sp"
-                android:textColorHint="@color/colorAccent"
                 android:importantForAutofill="no"
-                tools:targetApi="o"
-                android:inputType="textPassword" />
+                android:inputType="textPassword"
+                android:textColor="#333"
+                android:textColorHint="@color/colorAccent"
+                android:textSize="18sp"
+                tools:targetApi="o" />
 
         </com.github.florent37.materialtextfield.MaterialTextField>
-<!--
-        <EditText
-            android:id="@+id/reg_name1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp"
-            android:background="@drawable/input_design"
-            android:hint="Enter Name"
-            android:padding="20dp"
-            android:textColor="@android:color/white"
-            android:textColorHint="@android:color/white"
-            android:textSize="15sp"
-            android:textStyle="bold" />
+        <!--
+                <EditText
+                    android:id="@+id/reg_name1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/input_design"
+                    android:hint="Enter Name"
+                    android:padding="20dp"
+                    android:textColor="@android:color/white"
+                    android:textColorHint="@android:color/white"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
 
-        <EditText
-            android:id="@+id/reg_phone"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/reg_name"
-            android:layout_marginLeft="15dp"
-            android:layout_marginTop="6dp"
-            android:layout_marginRight="15dp"
-            android:background="@drawable/input_design"
-            android:hint="Enter Phone"
-            android:padding="20dp"
-            android:textColor="@android:color/white"
-            android:textColorHint="@android:color/white"
-            android:textSize="15sp"
-            android:textStyle="bold" />
+                <EditText
+                    android:id="@+id/reg_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/reg_name"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/input_design"
+                    android:hint="Enter Phone"
+                    android:padding="20dp"
+                    android:textColor="@android:color/white"
+                    android:textColorHint="@android:color/white"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
 
-        <EditText
-            android:id="@+id/reg_password"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/reg_phone"
-            android:layout_marginLeft="15dp"
-            android:layout_marginTop="6dp"
-            android:layout_marginRight="15dp"
-            android:background="@drawable/input_design"
-            android:hint="Enter Password"
-            android:padding="20dp"
-            android:textColor="@android:color/white"
-            android:textColorHint="@android:color/white"
-            android:textSize="15sp"
-            android:textStyle="bold" />
--->
+                <EditText
+                    android:id="@+id/reg_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/reg_phone"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/input_design"
+                    android:hint="Enter Password"
+                    android:padding="20dp"
+                    android:textColor="@android:color/white"
+                    android:textColorHint="@android:color/white"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+        -->
         <Button
             android:id="@+id/register"
             android:layout_width="match_parent"
